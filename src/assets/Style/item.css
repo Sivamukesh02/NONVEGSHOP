@@ -1,0 +1,221 @@
+/* items.css */
+
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@700;900&family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Whole items page */
+.itm-page {
+  background-color: white;
+}
+
+/* ---------- Section 1 : ITEMS heading ---------- */
+
+/* Cherry red with dark maroon edges - sticks to navbar */
+.itm-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 30px;
+  overflow: hidden;
+  text-align: center;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #d2042d 0%,
+    #c20329 60%,
+    #8a0a1e 100%
+  );
+}
+
+/* Mustard half circle - left */
+.itm-circle-left {
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background-color: #e3a418;
+}
+
+/* Mustard half circle - right */
+.itm-circle-right {
+  position: absolute;
+  bottom: -120px;
+  right: -120px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background-color: #e3a418;
+}
+
+/* ITEMS heading */
+.itm-title {
+  position: relative;
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 84px;
+  font-weight: 900;
+  letter-spacing: 14px;
+  color: white;
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Small line under heading */
+.itm-line {
+  position: relative;
+  width: 90px;
+  height: 5px;
+  margin: 18px 0;
+  border-radius: 5px;
+  background-color: white;
+}
+
+/* Slogan */
+.itm-slogan {
+  position: relative;
+  margin: 0;
+  font-family: "Pacifico", cursive;
+  font-size: 28px;
+  color: #e3a418;
+}
+
+/* ---------- Section 2 : cards ---------- */
+
+/* Space around cards */
+.itm-section {
+  padding: 90px 60px 110px 60px;
+}
+
+/* Cards - 3 in a line, last line is in the center */
+.itm-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Card - image on top, red part on bottom */
+.itm-card {
+  width: calc((100% - 80px) / 3);
+  overflow: hidden;
+  border-radius: 24px;
+  background-color: #d2042d;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Image box - hides the zoomed part */
+.itm-img-box {
+  height: 260px;
+  overflow: hidden;
+  background-color: #fff4e6;
+}
+
+/* Card image */
+.itm-img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+/* Image zoom on hover */
+.itm-img-box:hover .itm-img {
+  transform: scale(1.15);
+}
+
+/* Red info part */
+.itm-info {
+  padding: 24px;
+}
+
+/* Name and rate in one row */
+.itm-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Item name */
+.itm-name {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+}
+
+/* Item rate */
+.itm-price {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+  white-space: nowrap;
+  color: #f9f8f7;
+}
+
+/* Slogan */
+.itm-card-slogan {
+  margin: 10px 0 20px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ffe3e8;
+}
+
+/* Card button */
+.itm-btn {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 30px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #d2042d;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Card button hover */
+.itm-btn:hover {
+  color: #8a0a1e;
+  background-color: #e3a418;
+}
+
+/* ---------- Tablet screen - 2 cards in a line ---------- */
+@media (max-width: 1000px) {
+  .itm-section {
+    padding: 70px 30px 90px 30px;
+  }
+
+  .itm-card {
+    width: calc((100% - 40px) / 2);
+  }
+
+  .itm-title {
+    font-size: 64px;
+  }
+}
+
+/* ---------- Mobile screen - 1 card in a line ---------- */
+@media (max-width: 650px) {
+  .itm-hero {
+    padding: 70px 20px;
+  }
+
+  .itm-title {
+    font-size: 46px;
+    letter-spacing: 8px;
+  }
+
+  .itm-slogan {
+    font-size: 22px;
+  }
+
+  .itm-card {
+    width: 100%;
+  }
+}

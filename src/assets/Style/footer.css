@@ -1,0 +1,178 @@
+/* footer.css */
+
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Footer - cherry red */
+.footer {
+  background-color: #d2042d;
+  border-top: 5px solid #e3a418;
+}
+
+/* 4 columns */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 60px 60px 40px 60px;
+}
+
+/* Each column */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Logo and title together */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Logo image */
+.footer-logo-img {
+  width: 48px;
+  height: 48px;
+  padding: 6px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* GOAT title */
+.footer-title {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: white;
+}
+
+/* About text */
+.footer-about {
+  margin: 18px 0 22px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #ffe3e8;
+}
+
+/* Social icons row */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Each social icon - white circle */
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: white;
+  color: #d2042d;
+  transition: all 0.3s ease;
+}
+
+/* Icon size */
+.social-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Social icon hover - mustard and lift up */
+.social-icon:hover {
+  background-color: #e3a418;
+  color: #8a0a1e;
+  transform: translateY(-6px);
+}
+
+/* Column headings */
+.footer-heading {
+  position: relative;
+  margin: 0 0 24px 0;
+  padding-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: #e3a418;
+}
+
+/* Small line under heading */
+.footer-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+/* List */
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Links */
+.footer-link {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  color: #ffe3e8;
+  transition: all 0.3s ease;
+}
+
+/* Link hover - mustard and move right */
+.footer-link:hover {
+  padding-left: 8px;
+  color: #e3a418;
+}
+
+/* Normal text items */
+.footer-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: #ffe3e8;
+}
+
+/* Bottom bar - dark maroon */
+.footer-bottom {
+  padding: 18px 20px;
+  text-align: center;
+  background-color: #8a0a1e;
+}
+
+/* Bottom text */
+.footer-bottom p {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: white;
+}
+
+/* Tablet screen - 2 columns */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 50px 30px 30px 30px;
+  }
+}
+
+/* Mobile screen - 1 column */
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,383 @@
+/* about.css */
+
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Pacifico&family=Playfair+Display:wght@700;900&family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Whole about page */
+.abo-page {
+  overflow-x: clip; /* side la scroll bar varaama irukka */
+  background-color: white;
+}
+
+/* ---------- Section 1 : red band ---------- */
+
+/* Cherry red band - sticks to the navbar (no margin on top) */
+.abo-hero {
+  position: relative;
+  z-index: 2;
+  height: 200px;
+  margin: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #d2042d 0%,
+    #c20329 60%,
+    #8a0a1e 100%
+  );
+}
+
+/* Yellow round - half is inside red, half comes out below */
+.abo-circle {
+  position: absolute;
+  bottom: -100px; /* round keela evlo veliya varum nu inga maathalam */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: #e3a418;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Chicken image in the center of the round */
+.abo-circle-img {
+  width: 52%;
+  height: auto;
+  margin-top: 12%;
+  filter: drop-shadow(0 10px 12px rgba(0, 0, 0, 0.3));
+}
+
+/* GOAT About title */
+.abo-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6px 0 0 0;
+  line-height: 1;
+}
+
+/* GOAT word */
+.abo-goat {
+  font-family: "Permanent Marker", cursive;
+  font-size: 56px;
+  letter-spacing: 4px;
+  color: #8a0a1e;
+  text-shadow: 3px 3px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* About word */
+.abo-about {
+  margin-top: 4px;
+  font-family: "Pacifico", cursive;
+  font-size: 36px;
+  color: #d2042d;
+}
+
+/* Bones in the red band */
+.abo-bone {
+  position: absolute;
+  top: 70px;
+  width: 150px;
+}
+
+/* Left bone - shakes smoothly */
+.abo-bone-left {
+  left: 10%;
+  animation: aboShakeOne 3s ease-in-out infinite;
+}
+
+/* Right bone - shakes smoothly */
+.abo-bone-right {
+  right: 10%;
+  animation: aboShakeTwo 3.5s ease-in-out infinite;
+}
+
+/* Shake 1 */
+@keyframes aboShakeOne {
+  0% {
+    transform: rotate(-8deg) translateY(0);
+  }
+  50% {
+    transform: rotate(10deg) translateY(-12px);
+  }
+  100% {
+    transform: rotate(-8deg) translateY(0);
+  }
+}
+
+/* Shake 2 */
+@keyframes aboShakeTwo {
+  0% {
+    transform: rotate(10deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-8deg) translateY(-12px);
+  }
+  100% {
+    transform: rotate(10deg) translateY(0);
+  }
+}
+
+/* ---------- Section 2 : content rows ---------- */
+
+/* Space on top so the half round does not touch the content */
+.abo-main {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 270px 60px 60px 60px;
+}
+
+/* Image and content in a row */
+.abo-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Image box - no background */
+.abo-img-box {
+  display: flex;
+  justify-content: center;
+  width: 42%;
+}
+
+/* Image - zoom on hover */
+.abo-img {
+  width: 100%;
+  max-width: 440px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+/* Image hover zoom */
+.abo-img:hover {
+  transform: scale(1.12);
+}
+
+/* Content box - light transparent red */
+.abo-content {
+  display: flex;
+  flex-direction: column;
+  width: 58%;
+  padding: 45px 40px;
+  border: 2px solid rgba(210, 4, 45, 0.2);
+  border-radius: 24px;
+  background-color: rgba(210, 4, 45, 0.895);
+}
+
+/* Small tag - New Launch */
+.abo-tag {
+  align-self: flex-start;
+  margin-bottom: 14px;
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8a0a1e;
+  background-color: #e3a418;
+}
+
+/* Main heading */
+.abo-heading {
+  margin: 0 0 16px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  font-weight: 900;
+  color: white;
+}
+
+/* Small heading */
+.abo-subheading {
+  margin: 10px 0 12px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+}
+
+/* Paragraph */
+.abo-text {
+  margin: 0 0 16px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #f9cdcd;
+}
+
+/* ---------- Section 3 : slogan and button ---------- */
+
+/* Cherry red to dark maroon box with margin around */
+.abo-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 60px 100px 60px;
+  padding: 80px 30px;
+  border-radius: 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #d2042d 0%, #8a0a1e 100%);
+  box-shadow: 0 25px 50px rgba(138, 10, 30, 0.35);
+}
+
+/* Slogan */
+.abo-cta-slogan {
+  margin: 0 0 40px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.3;
+  color: white;
+}
+
+/* Bone shaped button - middle body */
+.abo-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 190px;
+  height: 52px;
+  margin: 14px 24px;
+  border-radius: 26px;
+  text-decoration: none;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+/* Bone ends - 4 round knobs */
+.abo-knob {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.abo-knob-top-left {
+  top: -14px;
+  left: -17px;
+}
+
+.abo-knob-bottom-left {
+  bottom: -14px;
+  left: -17px;
+}
+
+.abo-knob-top-right {
+  top: -14px;
+  right: -17px;
+}
+
+.abo-knob-bottom-right {
+  bottom: -14px;
+  right: -17px;
+}
+
+/* Text on the bone */
+.abo-btn-text {
+  position: relative;
+  z-index: 2;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #8a0a1e;
+  white-space: nowrap;
+}
+
+/* Bone button hover */
+.abo-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ---------- Tablet screen ---------- */
+@media (max-width: 900px) {
+  .abo-main {
+    gap: 60px;
+    padding: 270px 30px 40px 30px;
+  }
+
+  .abo-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* Second row - image comes first on small screens */
+  .abo-row:last-child {
+    flex-direction: column-reverse;
+  }
+
+  .abo-img-box,
+  .abo-content {
+    width: 100%;
+  }
+
+  .abo-cta {
+    margin: 40px 30px 80px 30px;
+  }
+}
+
+/* ---------- Mobile screen ---------- */
+@media (max-width: 600px) {
+  .abo-hero {
+    height: 240px;
+  }
+
+  .abo-circle {
+    bottom: -150px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .abo-goat {
+    font-size: 40px;
+  }
+
+  .abo-about {
+    font-size: 26px;
+  }
+
+  .abo-bone {
+    top: 40px;
+    width: 80px;
+  }
+
+  .abo-bone-left {
+    left: 4%;
+  }
+
+  .abo-bone-right {
+    right: 4%;
+  }
+
+  .abo-main {
+    padding: 200px 20px 30px 20px;
+  }
+
+  .abo-content {
+    padding: 30px 22px;
+  }
+
+  .abo-heading {
+    font-size: 32px;
+  }
+
+  .abo-cta {
+    margin: 30px 20px 60px 20px;
+    padding: 60px 20px;
+  }
+
+  .abo-cta-slogan {
+    font-size: 32px;
+  }
+}

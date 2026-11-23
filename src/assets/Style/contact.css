@@ -1,0 +1,418 @@
+/* contact.css */
+
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@700;900&family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Whole contact page */
+.contact-page {
+  background-color: white;
+}
+
+/* ---------- Section 1 : address and form ---------- */
+
+/* Cherry red base with dark maroon on the edges */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 60px 110px 60px;
+  background: radial-gradient(
+    circle at 50% 40%,
+    #d2042d 0%,
+    #c20329 60%,
+    #8a0a1e 100%
+  );
+}
+
+/* Page heading */
+.contact-heading {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-align: center;
+  color: white;
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Slogan under heading */
+.contact-slogan {
+  margin: 10px 0 80px 0;
+  font-family: "Pacifico", cursive;
+  font-size: 28px;
+  text-align: center;
+  color: #e3a418;
+}
+
+/* Left and right columns */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: start;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ---------- Left side : address ---------- */
+
+.address-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Address heading */
+.address-title {
+  margin: 0 0 14px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  font-weight: 900;
+  color: white;
+}
+
+/* Address paragraph */
+.address-text {
+  margin: 0 0 36px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #ffe3e8;
+}
+
+/* Each info row - icon and text */
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 26px;
+}
+
+/* Round icon */
+.info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #e3a418;
+  color: #8a0a1e;
+  transition: transform 0.3s ease;
+}
+
+/* Icon size */
+.info-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* Icon hover */
+.info-row:hover .info-icon {
+  transform: scale(1.12);
+}
+
+/* Info small heading */
+.info-title {
+  margin: 0 0 4px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #e3a418;
+}
+
+/* Info text */
+.info-text {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+/* Bone below the address - shakes smoothly */
+.bone-bottom {
+  width: 150px;
+  margin: 20px 0 0 30px;
+  animation: boneShakeTwo 3.5s ease-in-out infinite;
+}
+
+/* ---------- Right side : form ---------- */
+
+/* Form box - bone sits on top of this */
+.form-box {
+  position: relative;
+}
+
+/* Bone on top of the form - shakes smoothly */
+.bone-top {
+  position: absolute;
+  top: -75px;
+  right: -25px;
+  z-index: 3;
+  width: 150px;
+  animation: boneShakeOne 3s ease-in-out infinite;
+}
+
+/* White form card */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 45px 40px;
+  border-radius: 24px;
+  background-color: white;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Form heading */
+.form-title {
+  margin: 0 0 24px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 900;
+  color: #d2042d;
+}
+
+/* Label above each input */
+.form-label {
+  margin-bottom: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* Input and textarea */
+.form-input {
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  border: 2px solid #f1d3d9;
+  border-radius: 12px;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: #222222;
+  background-color: #fffafa;
+  transition: border-color 0.3s ease;
+}
+
+/* Input when clicked */
+.form-input:focus {
+  border-color: #d2042d;
+}
+
+/* Message box bigger */
+.form-textarea {
+  height: 130px;
+  resize: none;
+}
+
+/* Send button */
+.form-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: #d2042d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Send icon size */
+.form-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Send button hover */
+.form-btn:hover {
+  color: #8a0a1e;
+  background-color: #e3a418;
+  transform: translateY(-4px);
+}
+
+/* ---------- Bone shake animations ---------- */
+
+/* Shake 1 - for top bone */
+@keyframes boneShakeOne {
+  0% {
+    transform: rotate(-8deg) translateY(0);
+  }
+  50% {
+    transform: rotate(10deg) translateY(-12px);
+  }
+  100% {
+    transform: rotate(-8deg) translateY(0);
+  }
+}
+
+/* Shake 2 - for bottom bone */
+@keyframes boneShakeTwo {
+  0% {
+    transform: rotate(10deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-8deg) translateY(-12px);
+  }
+  100% {
+    transform: rotate(10deg) translateY(0);
+  }
+}
+
+/* ---------- Section 2 : order now ---------- */
+
+/* Cherry red to dark maroon box with margin around */
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 90px 60px;
+  padding: 80px 30px;
+  border-radius: 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #d2042d 0%, #8a0a1e 100%);
+  box-shadow: 0 25px 50px rgba(138, 10, 30, 0.35);
+}
+
+/* Heading */
+.cta-title {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 52px;
+  font-weight: 900;
+  color: white;
+}
+
+/* Slogan */
+.cta-slogan {
+  margin: 12px 0 40px 0;
+  font-family: "Pacifico", cursive;
+  font-size: 26px;
+  color: #e3a418;
+}
+
+/* Bone shaped button - middle body */
+.cta-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 190px;
+  height: 52px;
+  margin: 14px 24px;
+  border-radius: 26px;
+  text-decoration: none;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+/* Bone ends - 4 round knobs */
+.cta-knob {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.cta-knob-top-left {
+  top: -14px;
+  left: -17px;
+}
+
+.cta-knob-bottom-left {
+  bottom: -14px;
+  left: -17px;
+}
+
+.cta-knob-top-right {
+  top: -14px;
+  right: -17px;
+}
+
+.cta-knob-bottom-right {
+  bottom: -14px;
+  right: -17px;
+}
+
+/* Text on the bone */
+.cta-btn-text {
+  position: relative;
+  z-index: 2;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #8a0a1e;
+  white-space: nowrap;
+}
+
+/* Bone button hover */
+.cta-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ---------- Tablet screen ---------- */
+@media (max-width: 1000px) {
+  .contact-section {
+    padding: 70px 30px 90px 30px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 100px;
+  }
+
+  .cta-section {
+    margin: 70px 30px;
+  }
+}
+
+/* ---------- Mobile screen ---------- */
+@media (max-width: 600px) {
+  .contact-heading {
+    font-size: 44px;
+  }
+
+  .contact-slogan {
+    font-size: 22px;
+  }
+
+  .address-title {
+    font-size: 30px;
+  }
+
+  .contact-form {
+    padding: 35px 22px;
+  }
+
+  .bone-top {
+    top: -55px;
+    right: -5px;
+    width: 110px;
+  }
+
+  .bone-bottom {
+    width: 120px;
+  }
+
+  .cta-section {
+    margin: 50px 20px;
+    padding: 60px 20px;
+  }
+
+  .cta-title {
+    font-size: 36px;
+  }
+
+  .cta-slogan {
+    font-size: 20px;
+  }
+}

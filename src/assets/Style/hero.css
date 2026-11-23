@@ -1,0 +1,332 @@
+/* hero.css */
+
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Hero section - cherry red with a light dark maroon shade on the edges */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100vh - 76px);
+  min-height: 620px;
+  padding: 0 60px 0 40px;
+  overflow: hidden;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #d2042d 0%,
+    #c20329 60%,
+    #8a0a1e 10%
+  );
+}
+
+/* Mustard half circle - top left */
+.circle-top-left {
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  background-color: #e3a418;
+  z-index: 0;
+}
+
+/* Mustard half circle - bottom right */
+.circle-bottom-right {
+  position: absolute;
+  bottom: -140px;
+  right: -140px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: #e3a418;
+  z-index: 0;
+}
+
+/* Left side */
+.hero-left {
+  position: relative;
+  z-index: 1;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Plate box - image full height (navbar to bottom) */
+.plate-box {
+  position: relative;
+  height: 100%;
+  width: fit-content;
+}
+
+/* Plate image - hand touches navbar, plate touches bottom */
+.plate-img {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+/* Grill image sits on the plate */
+.grill-img {
+  position: absolute;
+  top: 58.5%; /* grill mela keela maathanum na inga maathu */
+  left: 50%;
+  width: 60%;
+  transform: translate(-50%, -50%);
+}
+
+/* Center side */
+.hero-center {
+  position: relative;
+  z-index: 1;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Big GOAT heading */
+.hero-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 120px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: white;
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Chicken image in place of O */
+.title-chicken {
+  width: 140px;
+  height: auto;
+  margin: 0 6px;
+}
+
+/* Slogan */
+.hero-slogan {
+  margin: 10px 0 0 0;
+  font-family: "Pacifico", cursive;
+  font-size: 34px;
+  color: #e3a418;
+}
+
+/* Small line under slogan */
+.hero-line {
+  width: 90px;
+  height: 4px;
+  margin: 16px 0;
+  border-radius: 5px;
+  background-color: white;
+}
+
+/* Content text */
+.hero-text {
+  max-width: 460px;
+  margin: 0 0 30px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #ffe3e8;
+}
+
+/* Two buttons side by side */
+.bone-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+/* Bone button - middle body (more round corners) */
+.bone-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 48px;
+  margin: 14px 24px;
+  padding: 0;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Bone ends - 4 round knobs (bigger now) */
+.knob {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.knob-top-left {
+  top: -13px;
+  left: -16px;
+}
+
+.knob-bottom-left {
+  bottom: -13px;
+  left: -16px;
+}
+
+.knob-top-right {
+  top: -13px;
+  right: -16px;
+}
+
+.knob-bottom-right {
+  bottom: -13px;
+  right: -16px;
+}
+
+/* White bone colour */
+.bone-white,
+.bone-white .knob {
+  background-color: white;
+}
+
+/* Mustard bone colour */
+.bone-yellow,
+.bone-yellow .knob {
+  background-color: #e3a418;
+}
+
+/* Text on the bone */
+.bone-text {
+  position: relative;
+  z-index: 2;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #8a0a1e;
+  white-space: nowrap;
+}
+
+/* Bone button hover */
+.bone-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Line with slogan on left and right */
+.line-slogan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Slogan text on both sides */
+.side-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e3a418;
+}
+
+/* Small line in the center */
+.center-line {
+  width: 5px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+/* Right side */
+.hero-right {
+  position: relative;
+  z-index: 1;
+  width: 30%;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Bone image above the right image - comes down and shakes lightly */
+.bone-img {
+  display: block;
+  position: relative;
+  top: 90px; /* bone keela mela maathanum na inga maathu */
+  width: 200px;
+  transform: rotate(9deg);
+  animation: boneShake 3.5s ease-in-out infinite;
+}
+
+/* Light shake */
+@keyframes boneShake {
+  0% {
+    transform: rotate(9deg);
+  }
+  25% {
+    transform: rotate(14deg);
+  }
+  50% {
+    transform: rotate(19deg);
+  }
+  75% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(9deg);
+  }
+}
+
+/* Right hero image */
+.hero-img {
+  width: 100%;
+  max-width: 420px;
+  max-height: 65vh;
+  margin-bottom: 35%;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+}
+
+/* Mobile screen */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+    padding: 0 20px 30px 20px;
+  }
+
+  .hero-left,
+  .hero-center,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-left {
+    height: 420px;
+  }
+
+  .hero-title {
+    font-size: 80px;
+  }
+
+  .title-chicken {
+    width: 90px;
+  }
+
+  .hero-slogan {
+    font-size: 26px;
+  }
+
+  .bone-buttons {
+    flex-wrap: wrap;
+  }
+}

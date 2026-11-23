@@ -1,0 +1,399 @@
+/* cont2.css */
+
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display:wght@700;900&family=Poppins:wght@400;500;600;700&display=swap");
+
+
+/* ---------- Parallax zone ---------- */
+
+/* Cream colour + png fixed at the back (till About section) */
+.parallax-zone {
+  background-color: #fff4e6;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; /* scroll pannum pothu png nikkum = parallax */
+}
+
+/* Empty space where the png is clearly visible */
+.parallax-section {
+  height: 400px;
+}
+
+/* ---------- Section 1 : 6 cards ---------- */
+
+/* Cream cover - png lite ah therium (0.8 ah maathina png kammi/jasthi therium) */
+.why-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 60px;
+  background-color: rgba(255, 244, 230, 0.8);
+}
+
+/* Heading */
+.why-heading {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 52px;
+  font-weight: 900;
+  text-align: center;
+  color: #d2042d;
+}
+
+/* Small line under heading */
+.why-line {
+  width: 90px;
+  height: 5px;
+  margin: 16px 0 60px 0;
+  border-radius: 5px;
+  background-color: #e3a418;
+}
+
+/* 3 cards in a row */
+.why-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+
+/* Each card */
+.why-card {
+  padding: 45px 32px;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Card hover - lift up */
+.why-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Cherry red card */
+.card-red {
+  background-color: #d2042d;
+  box-shadow: 0 12px 25px rgba(210, 4, 45, 0.3);
+}
+
+/* White card */
+.card-white {
+  background-color: white;
+  border: 2px solid #d2042d;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Card heading */
+.why-card-title {
+  margin: 0 0 14px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* Card paragraph */
+.why-card-text {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Text colours on red card */
+.card-red .why-card-title {
+  color: white;
+}
+
+.card-red .why-card-text {
+  color: #ffe3e8;
+}
+
+/* Text colours on white card */
+.card-white .why-card-title {
+  color: #d2042d;
+}
+
+.card-white .why-card-text {
+  color: #555555;
+}
+
+/* ---------- Section 2 : red band with yellow circle ---------- */
+
+/* Cherry red band - height is only as much as the text needs */
+.band-section {
+  position: relative;
+  z-index: 2; /* circle mela keela veliya vanthalum mela therium */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 45px 60px;
+  overflow-x: clip; /* side la scroll bar varaama irukka */
+  background-color: #d2042d;
+}
+
+/* Left text - faces the circle */
+.band-left {
+  flex: 1;
+  text-align: right;
+}
+
+/* Small words - FRESH and CHICKEN */
+.band-small {
+  margin: 0;
+  font-family: "Permanent Marker", cursive;
+  font-size: 30px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* Big words - CURRY CUT */
+.band-big {
+  margin: 6px 0;
+  font-family: "Permanent Marker", cursive;
+  font-size: 52px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #e3a418;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Big yellow circle - sticks out above and below the red band */
+.band-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 400px;
+  height: 400px;
+  margin: -160px 0; /* red band height ah jasthi aagaama circle veliya varum */
+  border-radius: 50%;
+  background-color: #e3a418;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Chicken image inside the circle */
+.band-chicken {
+  width: 82%;
+  height: auto;
+  filter: drop-shadow(0 10px 12px rgba(0, 0, 0, 0.3));
+}
+
+/* Right text */
+.band-right {
+  flex: 1;
+  text-align: left;
+}
+
+/* Right heading */
+.band-right-title {
+  margin: 0 0 20px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.3;
+  color: white;
+}
+
+/* Tick list */
+.band-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Each list item */
+.band-list li {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+/* Tick mark before each item */
+.band-list li::before {
+  content: "✔";
+  margin-right: 12px;
+  color: #e3a418;
+}
+
+/* ---------- Section 3 : About ---------- */
+
+/* Image left, content right */
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  padding: 100px 60px;
+  overflow: hidden;
+  background-color: white;
+}
+
+/* Left side */
+.about-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+/* Mustard circle behind the image */
+.about-circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #e3a418;
+}
+
+/* About image - smaller size */
+.about-img {
+  position: relative;
+  width: auto;
+  max-width: 100%;
+  max-height: 340px;
+  filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.3));
+}
+
+/* Right side content */
+.about-content {
+  width: 60%;
+}
+
+/* About heading */
+.about-heading {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 52px;
+  font-weight: 900;
+  color: #d2042d;
+}
+
+/* Small line under heading */
+.about-line {
+  width: 90px;
+  height: 5px;
+  margin: 16px 0 28px 0;
+  border-radius: 5px;
+  background-color: #e3a418;
+}
+
+/* About paragraph */
+.about-text {
+  margin: 0 0 18px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #555555;
+}
+
+/* ---------- Tablet screen ---------- */
+@media (max-width: 1100px) {
+  .why-section {
+    padding: 70px 30px;
+  }
+
+  .why-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .band-section {
+    gap: 30px;
+    padding: 35px 30px;
+  }
+
+  .band-circle {
+    width: 320px;
+    height: 320px;
+    margin: -100px 0;
+  }
+
+  .band-small {
+    font-size: 22px;
+  }
+
+  .band-big {
+    font-size: 36px;
+  }
+
+  .band-right-title {
+    font-size: 22px;
+  }
+
+  .band-list li {
+    font-size: 14px;
+  }
+}
+
+/* ---------- Mobile screen ---------- */
+@media (max-width: 800px) {
+  .parallax-section {
+    height: 300px;
+  }
+
+  .why-heading {
+    font-size: 38px;
+  }
+
+  .why-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .band-section {
+    flex-direction: column;
+    gap: 25px;
+    padding: 40px 20px;
+  }
+
+  .band-left,
+  .band-right {
+    text-align: center;
+  }
+
+  .band-small {
+    font-size: 26px;
+  }
+
+  .band-big {
+    font-size: 42px;
+  }
+
+  .band-right-title {
+    font-size: 24px;
+  }
+
+  .band-circle {
+    width: 260px;
+    height: 260px;
+    margin: 0;
+  }
+
+  .about-section {
+    flex-direction: column;
+    gap: 40px;
+    padding: 70px 30px;
+  }
+
+  .about-left,
+  .about-content {
+    width: 100%;
+  }
+
+  .about-circle {
+    width: 260px;
+    height: 260px;
+  }
+
+  .about-img {
+    max-height: 280px;
+  }
+
+  .about-heading {
+    font-size: 38px;
+  }
+}
